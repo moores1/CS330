@@ -16,10 +16,10 @@ https://www.geeksforgeeks.org/history-of-c/
 
 ### Coding with C++
 
-In order to code in C++, you first need to download the extension for C++ on VisualStudio Code. If you have't installed it before, you will also need a compiler since VS Code doesn't have one. You can go to this [website]([url](https://code.visualstudio.com/docs/languages/cpp)https://code.visualstudio.com/docs/languages/cpp), and install the version that is compatabile with your operating system. There is an example on the site to download the necessary software for each specific OS as well as how to construct a hello world program!
+In order to code in C++, you first need to download the extension for C++ on VisualStudio Code. If you have't installed it before, you will also need a compiler since VS Code doesn't have one. You can go to this [website](https://code.visualstudio.com/docs/languages/cpp), and install the version that is compatabile with your operating system. There is an example on the site to download the necessary software for each specific OS as well as how to construct a hello world program!
 
 VS Code is not the only IDE that supports C++, but I chose to use it since I already had it downloaded, and I use it the most frequently for coding in other languages. Compared to programs like Python or Java, C++ runs the same way in VS Code. All you have to do is press the play button or the F5/Crtl+F5 keyboard shortcut. 
-To comment in C++, all you have to do it // for a single line comment, or open the comment with /* and close it with */ on a different line. 
+To comment in C++, all you have to do it `//` for a single line comment, or open the comment with `/*` and close it with `*/` on a different line. 
 
 
 
