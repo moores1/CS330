@@ -11,6 +11,7 @@ C++ is often used in the gaming, finance, computing, and robotics industries sin
 In game development, C++ is advantageous since it has a high performace compared to other languages. Most APIs are written in C++ to keep runtime as low as possible. Within the finance indutry, C++ is used within market making strategies in option trading since it is crucial to have low-latency programming so your data can be updated quickly and you won't be taken advantage of by a faster firm. Robotics also uses C++ as it has direct access to hardware so you can write code for sensors and other components. 
 
 Resources: https://unstop.com/blog/history-of-cpp
+
 https://www.geeksforgeeks.org/history-of-c/
 
 ### Coding with C++
