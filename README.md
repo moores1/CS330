@@ -26,7 +26,17 @@ https://learn.microsoft.com/en-us/cpp/cpp/comments-cpp?view=msvc-170
 
 ## Assignments 2
 
-### 
+### Naming Conventions
+
+Naming conventions in C++ are very similar to Python. 
+
+In C++, classes should be denoted with a capitalized first letter, and they are nouns most of the time. Uppercase letters are used as word separators, and underscores are not used. A private attribute within a class should have an 'm' added to the beginning of the name. 
+
+Functions almost always start with a verb since they perform actions. The name should be descriptive of what the function does. The first character of the name should be lowercase, but the second word should be capitalized since functions also use uppercase letters as separators. 
+
+Variables start with a letter of the alphabet, and numbers can only be used after that first character. The only special symbol that's allowed is the underscore. The name of a variable cannot be a keyword since that could cause issues with something being overwritten. 
+
+Constant values are all capital letters. 
 
 
 
