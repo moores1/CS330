@@ -69,7 +69,7 @@ map <type_1, type_2> name;
 
 ### Notes about the C++ language
 
-C++ is statically typed, so when you make a variable as an `int`, that cannot be changed. It is also a weak language, meaning it supports converting between types (like a string vs. a float). Everything in C++ is mutable, so, instead of pointing to the same thing, an x that is assigned y actually means that you update whatever is in x with what is in y. However, you can use `const` to make something in C++ immutable.
+C++ is statically typed, so when you make a variable as an `int`, that cannot be changed. It is also a strong language since there is type-checking. Everything in C++ is mutable, so, instead of pointing to the same thing, an x that is assigned y actually means that you update whatever is in x with what is in y. However, you can use `const` to make something in C++ immutable.
 
 #### Operators 
 
