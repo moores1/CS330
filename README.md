@@ -8,7 +8,7 @@ I have chosen to research and learn about C++. The language was created in 1979 
 
 C++ is often used in the gaming, finance, computing, and robotics industries since it is a low-latency language. 
 
-In game development, C++ is advantageous since it has a high performance compared to other languages. Most APIs are written in C++ to keep runtime as low as possible. Within the finance industry, C++ is used within market-making strategies in option trading since it is crucial to have low-latency programming so your data can be updated quickly and you won't be taken advantage of by a faster firm. Robotics also uses C++ as it has direct access to hardware so you can write code for sensors and other components. 
+In game development, C++ is advantageous since it has a high performance compared to other languages. Most APIs are written in C++ to keep runtime as low as possible. Within the finance industry, C++ is used within market-making strategies in options trading since it is crucial to have low-latency programming so your data can be updated quickly and you won't be taken advantage of by a faster firm. Robotics also uses C++ as it has direct access to hardware so you can write code for sensors and other components. 
 
 ### Coding with C++
 
@@ -23,6 +23,16 @@ https://www.geeksforgeeks.org/history-of-c/
 
 https://learn.microsoft.com/en-us/cpp/cpp/comments-cpp?view=msvc-170
 
+### Hello World Code
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello world!";
+    return 0;
+}
+```
 
 ## Assignments 2
 
@@ -34,9 +44,43 @@ In C++, classes should be denoted with a capitalized first letter, and they are 
 
 Functions almost always start with a verb since they perform actions. The name should be descriptive of what the function does. The first character of the name should be lowercase, but the second word should be capitalized since functions also use uppercase letters as separators. 
 
-Variables start with a letter of the alphabet, and numbers can only be used after that first character. The only special symbol that's allowed is the underscore. The name of a variable cannot be a keyword since that could cause issues with something being overwritten. 
+Variables start with a letter of the alphabet, and numbers can only be used after that first character. The only special symbol that's allowed is the underscore. If the variable is a pointer, then a '*p' is added to the beginning. The name of a variable cannot be a keyword since that could cause issues with something being overwritten. In C++, there are 95 total keywords that you cannot name variables (a few examples are `if`, `else`, `static`, `and`, `void). 
 
-Constant values are all capital letters. 
+Constant values are typically denoted by all capital letters. 
+
+For example, you could use the following:
+
+```cpp
+int num = 5;
+string name = 'Cindy';
+double temp = 74.5;
+bool fact = TRUE;
+
+//To make a list you can use the following skeleton code
+#include<list>
+std::list<type> name = {value1, value2, ...};
+//Here, type is the variable type (string, char, int, etc.), and name is whatever you choose to name it
+
+//C++ doesn't use dictionaries. It uses hash maps which use the same logic
+#include <map>
+map <type_1, type_2> name;
+//type_1 and 2 are the types of data in each part. The first is the 'key' and the second is the 'value'
+```
+
+### Notes about the C++ language
+
+C++ is statically typed, so when you make a variable as an `int`, that cannot be changed. It is also a weak language, meaning it supports converting between types (like a string vs. a float). Everything in C++ is mutable, so, instead of pointing to the same thing, an x that is assigned y actually means that you update whatever is in x with what is in y. However, you can use `const` to make something in C++ immutable.
+
+#### Operators 
+
+You can use normal operators like `+`, `-`, `*`, `%`, and `/`. 
+To decrease an integer by 1 you can use `--`, and to add use `++`.
+To compare values, you can use `=`, `==`, `<`, `<=`, `>`, `>=`, and `!=`. 
+The logical comparisons are `&&` for AND, `||` for OR, and `!` for NOT. 
+
+
+
+
 
 
 
