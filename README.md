@@ -44,7 +44,7 @@ In C++, classes should be denoted with a capitalized first letter, and they are 
 
 Functions almost always start with a verb since they perform actions. The name should be descriptive of what the function does. The first character of the name should be lowercase, but the second word should be capitalized since functions also use uppercase letters as separators. 
 
-Variables start with a letter of the alphabet, and numbers can only be used after that first character. The only special symbol that's allowed is the underscore. If the variable is a pointer, then a '*p' is added to the beginning. The name of a variable cannot be a keyword since that could cause issues with something being overwritten. In C++, there are 95 total keywords that you cannot name variables (a few examples are `if`, `else`, `static`, `and`, `void). 
+Variables start with a letter of the alphabet, and numbers can only be used after that first character. The only special symbol that's allowed is the underscore. If the variable is a pointer, then a '*p' is added to the beginning. A pointer 'points' to an address of a variable. The name of a variable cannot be a keyword since that could cause issues with something being overwritten. In C++, there are 95 total keywords that you cannot name variables (a few examples are `if`, `else`, `static`, `and`, `void). 
 
 Constant values are typically denoted by all capital letters. 
 
