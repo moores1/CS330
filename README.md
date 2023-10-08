@@ -84,6 +84,7 @@ The logical comparisons are `&&` for AND, `||` for OR, and `!` for NOT.
 ### Functions
 
 ```cpp
+//Write a function that takes in two numbers, multiplies them, and returns the output
 #include <iostream>
 using namespace std;
 
@@ -102,6 +103,7 @@ int main(){
 ```
 
 ```cpp
+// Write a recursive function (one that calculates a factorial is fine)
 #include <iostream>
 using namespace std;
 
@@ -118,6 +120,8 @@ int main1(){
   return 0;
 }
 ```
+
+
 
 
 
