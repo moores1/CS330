@@ -121,6 +121,11 @@ int main1(){
 }
 ```
 
+```cpp
+//Write a function that takes in a string (or your language's equivalent) and splits it into two strings, then returns both strings
+```
+
+
 
 
 
