@@ -123,8 +123,57 @@ int main1(){
 
 ```cpp
 //Write a function that takes in a string (or your language's equivalent) and splits it into two strings, then returns both strings
-```
+#include <iostream>
+#include <string>
+#include <utility>
 
+std::pair<std::string, std::string> splitString(const std::string& inputString) {
+    std::pair<std::string, std::string> result;
+
+    // Calculate the midpoint to split the string into two parts
+    int midpoint = inputString.length() / 2;
+
+    result.first = inputString.substr(0, midpoint);
+    result.second = inputString.substr(midpoint);
+    return result;}
+
+int main() {
+    std::string input;
+
+    std::cout << "Enter a string: ";
+    std::cin >> input;
+    
+    // Split the string
+    std::pair<std::string, std::string> splitted = splitString(input);
+
+    // Output the two split strings
+    std::cout << "First part: " << splitted.first << std::endl;
+    std::cout << "Second part: " << splitted.second << std::endl;
+
+    return 0;}
+```
+```
+#include <iostream>
+
+// Function to test pass-by-value or pass-by-reference
+void testFunction(int value, int& reference) {
+    value = 100;        // Modifying the value parameter
+    reference = 200;    // Modifying the reference parameter
+}
+
+int main() {
+    int val = 50;
+    int ref = 50;
+
+    std::cout << "Before function call: val = " << val << ", ref = " << ref << std::endl;
+
+    testFunction(val, ref);
+
+    std::cout << "After function call: val = " << val << ", ref = " << ref << std::endl;
+
+    return 0;
+}
+```
 
 
 
