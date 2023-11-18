@@ -83,6 +83,17 @@ The logical comparisons are `&&` for AND, `||` for OR, and `!` for NOT.
 
 ### Functions
 
+In C++, the structure for creating a function is as follows:
+```
+<return_datatype> function_name (<input_datatype>){
+    function element;
+    return something;
+}
+```
+Looking at the above code, you can see that you have to declare the type of output of the function and what type of input it has. You can have more than 1 input if you want. You can only return 1 item at a time, but if you need to return more you can package items together as a tuple. 
+
+The placement of the function in code doesn't matter since it's a compiled language. However, the function is typically placed before the main function where it is called. 
+
 ```cpp
 //Write a function that takes in two numbers, multiplies them, and returns the output
 #include <iostream>
