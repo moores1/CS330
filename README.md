@@ -200,6 +200,46 @@ C++ is statically scoped based on the rules above.
 
 C++ does not inherently prevent any side-effects since one of the goals of the language is to provide enough flexibility to the user. To prevent any unwanted side-effects, you should make sure that the scoping is correct so variables are not changed without you meaning them to be altered. 
 
+## Assignment 4
+
+### Conditional Statements
+
+A basic example of an if/else statement is shown below. As you can see, the boolean to pass the if is `true`. To make an else if statement, you can add a section for `else if` with the same syntax as the first if statement. Inside each if/else if/ else section, you delimit the code inside with `{}`. 
+```
+#include <iostream>
+
+int main() {
+    bool x = true;
+
+    if x {
+        cout << "x is true!" << std::endl;
+    \\else if ...
+    } else {
+        cout << "x is not true!" << std::endl;
+    }
+
+    return 0;
+}
+```
+
+```
+#include <iostream>
+
+int main() {
+    int x = 5;
+    int y = 10;
+
+    if x == 5 && y == 10 {
+        cout << "Yes" << endl;
+    else if  x == 0 {
+        break
+    } else {
+        cout << "x and y aren't right" << endl;
+    }
+
+    return 0;
+}
+```
 
 
 
