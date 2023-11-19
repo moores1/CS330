@@ -90,12 +90,12 @@ In C++, the structure for creating a function is as follows:
     return something;
 }
 ```
-Looking at the above code, you can see that you have to declare the type of output of the function and what type of input it has. You can have more than 1 input if you want. You can only return 1 item at a time, but if you need to return more you can package items together as a tuple. 
+Looking at the above code, you can see that you have to declare the type of output of the function and what type of input it has. You can have more than 1 input if you want, and it doesn't matter the datatype. You can only return 1 item at a time, but if you need to return more you can package items together as a tuple. The example below of splitting a string into 2 parts is an example of packaging the items together in order to return both parts. 
 
 The placement of the function in code doesn't matter since it's a compiled language. However, the function is typically placed before the main function where it is called. 
 
 ```cpp
-//Write a function that takes in two numbers, multiplies them, and returns the output
+//A function that takes in two numbers, multiplies them, and returns the output
 #include <iostream>
 using namespace std;
 
@@ -113,8 +113,10 @@ int main(){
 
 ```
 
+C++ does support recursive functions, and you can create one by calling the function again with the updated value. An example of using recursion to calculate a factorial is shown below. 
+
 ```cpp
-// Write a recursive function (one that calculates a factorial is fine)
+// A recursive function calculating a factorial
 #include <iostream>
 using namespace std;
 
@@ -133,7 +135,7 @@ int main1(){
 ```
 
 ```cpp
-//Write a function that takes in a string (or your language's equivalent) and splits it into two strings, then returns both strings
+//A function that takes in a string and splits it into two strings, then returns both strings
 #include <iostream>
 #include <string>
 #include <utility>
@@ -185,8 +187,18 @@ int main() {
     return 0;
 }
 ```
+The function above demonstrates that C++ is pass-by-reference since when the reference variable is changed in the function, the reference is updated while the value is not. 
 
+In C++, things are stored on the stack unless it is specified as `new`. For example, `int var` would make the variable `var` stored on the stack, while `int* ptr = new int` would make the variable and store it on the heap. 
 
+### Scoping Rules
+ 1. Variables declared outside of functions or a class have global scope.
+ 2. Variables made within a code block `{}` only have local scope. Outside of that block they do not exist and cannot be called.
+ 3. Items made within a function only exist inside that function, and, unless they are returned, you cannot see them outside of that.
+
+C++ is statically scoped based on the rules above. 
+
+C++ does not inherently prevent any side-effects since one of the goals of the language is to provide enough flexibility to the user. To prevent any unwanted side-effects, you should make sure that the scoping is correct so variables are not changed without you meaning them to be altered. 
 
 
 
