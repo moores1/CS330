@@ -204,7 +204,7 @@ C++ does not inherently prevent any side-effects since one of the goals of the l
 
 ### Conditional Statements
 
-A basic example of an if/else statement is shown below. As you can see, the boolean to pass the if is `true`. To make an else if statement, you can add a section for `else if` with the same syntax as the first if statement. Inside each if/else if/ else section, you delimit the code inside with `{}`. 
+A basic example of an if/else statement is shown below. As you can see, the boolean to pass the if is `true`. To make an else if statement, you can add a section for `else if` with the same syntax as the first if statement. Inside each if/else if/ else section, you delimit the code inside with `{}`. However, you do not need a delimiter (this can lead to the 'dangling else' problem that will be discussed later. 
 ```
 #include <iostream>
 
@@ -221,7 +221,7 @@ int main() {
     return 0;
 }
 ```
-
+To include 2 conditions in the statement, you can use either `&&` for 'and', `||` for 'or', `!` for 'not', and `==` for 'equals'. The following code shows how to use these statements!
 ```
 #include <iostream>
 
@@ -241,10 +241,35 @@ int main() {
 }
 ```
 
+C++ does use short-circuit evaluation based on the following example:
+```
+bool a = false;
+bool b = true;
 
+if (a && b) {
+    // This code will not execute because a is false
+}
+```
 
+We can see that C++ just stops after evaluating the first condition. 
 
+As mentioned above, it is not necessary for an if/else statement to include brackets. This can save time if the statement is already simple, but it could cause problems if you have nested statements since the else statement might run at an unwanted time. 
 
+C++ also supports switch statements for various cases you want to test for. The skeleton code for it is shown below
+
+```
+switch (expression) {
+    case constant1:
+        // code to be executed if expression equals constant1
+        break;
+    case constant2:
+        // code to be executed if expression equals constant2
+        break;
+    default:
+        // code to be executed if none of the cases match the expression
+}
+```
+The only limitation for this is that you cannot add `continue` to get all the statements to be evaluated. 
 
 
 
