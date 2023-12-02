@@ -272,6 +272,67 @@ switch (expression) {
 The only limitation for this is that you cannot add `continue` to get all the statements to be evaluated. 
 
 
+## PLP 5
+
+C++ is an object-oriented language, meaning that it primarily uses classes and calls those objects to perform functions. The following code is a basic example of how to make a class and which functions are commonly used in classes. In this example, a `Person` object is made with name and age as its attributes. 
+
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person {
+//this creates the attributes of the class. Here, these 2 variables are private.
+private:
+    string name;
+    int age;
+
+public:
+    // Constructor to initialize name and age
+    Person(string personName, int personAge) : name(personName), age(personAge) {}
+
+    // Function to set the name. Void is included since nothing is returned in this set function. Only the name is set.
+    void setName(string personName) {
+        name = personName;
+    }
+
+    // Function to set the age. Again, nothing is returned so void is used. 
+    void setAge(int personAge) {
+        age = personAge;
+    }
+
+    // Function to get the name. Since the name is a string, you need to specify the type of return you expect.
+    string getName() const {
+        return name;
+    }
+
+    // Function to get the age. Int is added since age is an integer.
+    int getAge() const {
+        return age;
+    }
+};
+
+int main() {
+    // Creating a Person object
+    Person person("Alice", 30);
+
+    // Accessing and displaying person's details
+    cout << "Initial Details:" << endl;
+    cout << "Name: " << person.getName() << endl;
+    cout << "Age: " << person.getAge() << endl;
+
+    // Modifying person's details
+    person.setName("Bob");
+    person.setAge(25);
+
+    // Displaying modified details
+    cout << "\nModified Details:" << endl;
+    cout << "Name: " << person.getName() << endl;
+    cout << "Age: " << person.getAge() << endl;
+
+    return 0;
+}
+```
 
 
 
