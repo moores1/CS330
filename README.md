@@ -1,7 +1,7 @@
 # CS330 C++ Programming Project
 This repo is for my CS 330 project
 
-## Assignment 1:
+## History of C++
 
 ### History and Use
 I have chosen to research and learn about C++. The language was created in 1979 by Bjarne Stroustrup in an effort to make a language that could help programmers make more sophisticated systems while maintaining low-level access to hardware. However, the first edition of C++ wasn't actually published until 1985. 
@@ -12,16 +12,10 @@ In game development, C++ is advantageous since it has a high performance compare
 
 ### Coding with C++
 
-In order to code in C++, you first need to download the extension for C++ on VisualStudio Code. If you haven't installed it before, you will also need a compiler since VS Code doesn't have one. You can go to this [website](https://code.visualstudio.com/docs/languages/cpp), and install the version that is compatible with your operating system. There is an example on the site to download the necessary software for each specific OS as well as how to construct a Hello World program!
+In order to code in C++, you first need to download the extension for C++ on VisualStudio Code. If you haven't installed it before, you will also need a compiler since VS Code doesn't have one. You can go to this [website](https://code.visualstudio.com/docs/languages/cpp), and install the version that is compatible with your operating system. There is an example on the website to download the necessary software for each specific OS as well as how to construct a Hello World program!
 
 VS Code is not the only IDE that supports C++, but I chose to use it since I already had it downloaded, and I use it the most frequently for coding in other languages. Compared to programs like Python or Java, C++ runs the same way in VS Code. All you have to do is press the play button or the F5/Crtl+F5 keyboard shortcut. 
 To comment in C++, all you have to do is `//` for a single line comment, or open the comment with `/*` and close it with `*/` on a different line. 
-
-Resources: https://unstop.com/blog/history-of-cpp
-
-https://www.geeksforgeeks.org/history-of-c/
-
-https://learn.microsoft.com/en-us/cpp/cpp/comments-cpp?view=msvc-170
 
 ### Hello World Code
 
@@ -34,9 +28,9 @@ int main() {
 }
 ```
 
-## Assignments 2
+## Data Types and Naming Conventions
 
-### Naming Conventions
+### Naming Your Variables
 
 Naming conventions in C++ are very similar to Python. 
 
@@ -71,7 +65,9 @@ map <type_1, type_2> name;
 
 C++ is statically typed, so when you make a variable as an `int`, that cannot be changed. It is also a strong language since there is type-checking. Everything in C++ is mutable, so, instead of pointing to the same thing, an x that is assigned y actually means that you update whatever is in x with what is in y. However, you can use `const` to make something in C++ immutable.
 
-#### Operators 
+It is useful to keep track of what kind of variables are in your program so you are aware of where things could potentially go wrong in your program!
+
+### Operators 
 
 You can use normal operators like `+`, `-`, `*`, `%`, and `/`. 
 To decrease an integer by 1 you can use `--`, and to add use `++`.
@@ -79,9 +75,9 @@ To compare values, you can use `=`, `==`, `<`, `<=`, `>`, `>=`, and `!=`.
 The logical comparisons are `&&` for AND, `||` for OR, and `!` for NOT. 
 
 
-## Assignment 3
+## Making Functions in C++
 
-### Functions
+### Syntax for Creating Functions
 
 In C++, the structure for creating a function is as follows:
 ```
@@ -95,7 +91,7 @@ Looking at the above code, you can see that you have to declare the type of outp
 The placement of the function in code doesn't matter since it's a compiled language. However, the function is typically placed before the main function where it is called. 
 
 ```cpp
-//A function that takes in two numbers, multiplies them, and returns the output
+//A function that takes in two numbers, multiplies them and returns the output
 #include <iostream>
 using namespace std;
 
@@ -112,6 +108,8 @@ int main(){
 }
 
 ```
+
+### Recursion
 
 C++ does support recursive functions, and you can create one by calling the function again with the updated value. An example of using recursion to calculate a factorial is shown below. 
 
@@ -133,6 +131,8 @@ int main1(){
   return 0;
 }
 ```
+
+### String Splitting
 
 ```cpp
 //A function that takes in a string and splits it into two strings, then returns both strings
@@ -165,6 +165,9 @@ int main() {
 
     return 0;}
 ```
+
+### Pass-by-Value/Reference
+
 ```
 #include <iostream>
 
@@ -192,6 +195,7 @@ The function above demonstrates that C++ is pass-by-reference since when the ref
 In C++, things are stored on the stack unless it is specified as `new`. For example, `int var` would make the variable `var` stored on the stack, while `int* ptr = new int` would make the variable and store it on the heap. 
 
 ### Scoping Rules
+
  1. Variables declared outside of functions or a class have global scope.
  2. Variables made within a code block `{}` only have local scope. Outside of that block they do not exist and cannot be called.
  3. Items made within a function only exist inside that function, and, unless they are returned, you cannot see them outside of that.
@@ -200,9 +204,7 @@ C++ is statically scoped based on the rules above.
 
 C++ does not inherently prevent any side-effects since one of the goals of the language is to provide enough flexibility to the user. To prevent any unwanted side-effects, you should make sure that the scoping is correct so variables are not changed without you meaning them to be altered. 
 
-## Assignment 4
-
-### Conditional Statements
+## Selection, Loops, and Conditionals
 
 A basic example of an if/else statement is shown below. As you can see, the boolean to pass the if is `true`. To make an else if statement, you can add a section for `else if` with the same syntax as the first if statement. Inside each if/else if/ else section, you delimit the code inside with `{}`. However, you do not need a delimiter (this can lead to the 'dangling else' problem that will be discussed later. 
 ```
@@ -272,7 +274,7 @@ switch (expression) {
 The only limitation for this is that you cannot add `continue` to get all the statements to be evaluated. 
 
 
-## PLP 5
+## Classes and Inheritance
 
 C++ is an object-oriented language, meaning that it primarily uses classes and calls those objects to perform functions. The following code is a basic example of how to make a class and which functions are commonly used in classes. In this example, a `Person` object is made with name and age as its attributes. 
 
@@ -333,6 +335,21 @@ int main() {
     return 0;
 }
 ```
+
+### Inheritance
+
+To inherit an object and apply it to a new class, you can use the 
+
+```
+
+
+
+Resources: https://unstop.com/blog/history-of-cpp
+
+https://www.geeksforgeeks.org/history-of-c/
+
+https://learn.microsoft.com/en-us/cpp/cpp/comments-cpp?view=msvc-170
+
 
 
 
