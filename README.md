@@ -38,7 +38,7 @@ In C++, classes should be denoted with a capitalized first letter, and they are 
 
 Functions almost always start with a verb since they perform actions. The name should be descriptive of what the function does. The first character of the name should be lowercase, but the second word should be capitalized since functions also use uppercase letters as separators. 
 
-Variables start with a letter of the alphabet, and numbers can only be used after that first character. The only special symbol that's allowed is the underscore. If the variable is a pointer, then a '*p' is added to the beginning. A pointer 'points' to an address of a variable. The name of a variable cannot be a keyword since that could cause issues with something being overwritten. In C++, there are 95 total keywords that you cannot name variables (a few examples are `if`, `else`, `static`, `and`, `void`). 
+Variables start with a letter of the alphabet, and numbers can only be used after that first character. The only special symbol that's allowed is the underscore. If the variable is a pointer, then a '*p' is added to the beginning. A pointer 'points' to an address of a variable. The name of a variable cannot be a keyword since that could cause issues with something being overwritten. In C++, there are 95 total keywords that you cannot name variables (a few examples are `if`, `else`, `static`, `and`, and `void`). 
 
 Constant values are typically denoted by all capital letters. 
 
@@ -214,10 +214,10 @@ int main() {
     bool x = true;
 
     if x {
-        cout << "x is true!" << std::endl;
+        cout << "x is true!" << endl;
     \\else if ...
     } else {
-        cout << "x is not true!" << std::endl;
+        cout << "x is not true!" << endl;
     }
 
     return 0;
@@ -249,7 +249,7 @@ bool a = false;
 bool b = true;
 
 if (a && b) {
-    // This code will not execute because a is false
+    // This code will not execute because a is false and won't evaluate b
 }
 ```
 
@@ -338,8 +338,16 @@ int main() {
 
 ### Inheritance
 
-To inherit an object and apply it to a new class, you can use the 
+To inherit an object and apply it to a new class, you can use `accessSpecifier` which *specifies* whether the base class that a derived class will use private or public attributes. You can see an example of the syntax of this below. If you use `public` as the accessSpecifier, you inherit the public aspects of base class as public aspects of the derived class. If you instead use `private`, all the variables (no matter if they are public or not) will be inherited as private attributes. 
 
+```
+class BaseClass {
+    // Base class definition
+};
+
+class DerivedClass : accessSpecifier BaseClass {
+    // Derived class definition
+};
 ```
 
 
