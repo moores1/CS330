@@ -336,6 +336,24 @@ int main() {
 }
 ```
 
+One important aspect to be aware of is that C++ does not have a built-in toString() method. This means you cannot simply use `cout<< object_name << endl;` to print out an object. In order to do this, you need to create either your own toString() method by using one of the following: 
+
+```
+string toString() const {
+        std::ostringstream strout;
+        strout << "object: " << object;
+        return strout.str();
+}
+// or you can overwrite the << operator
+
+// the keyword friend is used to overwrite a operator
+friend std::ostream& operator<<(std::ostream& os, const Trade& trade) {
+        os << "Object: " << object.attribute << endl;
+        return os;
+    }
+```
+
+
 ### Inheritance
 
 To inherit an object and apply it to a new class, you can use `accessSpecifier` which *specifies* whether the base class that a derived class will use private or public attributes. You can see an example of the syntax of this below. If you use `public` as the accessSpecifier, you inherit the public aspects of base class as public aspects of the derived class. If you instead use `private`, all the variables (no matter if they are public or not) will be inherited as private attributes. 
